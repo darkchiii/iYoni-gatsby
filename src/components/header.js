@@ -1,42 +1,74 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import React from "react"
+import { useState, useEffect } from 'react';
+import {Button} from './Button' ;
+import './header.css' ;
+import logo from '../images/logo-iyoni.png' ;
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+function Navbar() {
+  const [click, setClick] = useState(false) ;
+  const [button, setButton] = useState(true) ;
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+  const handleClick = () => setClick(!click) ;
+  const closeMobileMenu = () => setClick(false) ;
+
+  const showButton = () => {
+      if (window.innerWidth <=960) {
+          setButton(false) ;
+      }
+      else {
+          setButton(true);
+      }
+  };
+
+  useEffect(() => {
+      showButton();
+  }, []);
+
+  window.addEventListener('resize', showButton) ;
+
+  return (
+      <nav className="navbar">
+          <div className="navbar-container">
+              <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+                  <img className="logo" src={logo} alt='logo' />
+              </Link>
+              <div className='menu-icon' onClick={handleClick}>
+                  <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
+              </div>
+              <ul className={click ? 'nav-menu active' : 'nav-menu'} >
+                  <li className='nav-item'>
+                      <Link to='/o-iyoni' className='nav-links' onClick={closeMobileMenu}>
+                          O iYoni
+                      </Link>
+                  </li>
+                  <li className='nav-item'>
+                      <Link to='/baza-wiedzy' className='nav-links' onClick={closeMobileMenu}>
+                          Baza wiedzy
+                      </Link>
+                  </li>
+                  <li>
+                   <a className='nav-links-mobile' href='https://play.google.com/store/apps/details?id=pl.lifebite.iyoni'>
+                      {/* <Link to='pobierz-aplikacje'  */}
+                      {/* className='nav-links-mobile' */}
+                      {/* onClick={closeMobileMenu}> */}
+                      
+                          Pobierz aplikację
+                       {/* </Link>  */}
+                      </a>
+                  </li>
+                  {/* <a href='https://play.google.com/store/apps/details?id=pl.lifebite.iyoni'>  */}
+                  {button &&
+                                      // <a href='https://play.google.com/store/apps/details?id=pl.lifebite.iyoni'> 
+                                      <Button>Pobierz aplikację</Button>
+                                      // </a>
+                                      }
+                  {/* </a> */}
+              </ul>
+          </div>
+      </nav>
+  )
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Navbar ;
