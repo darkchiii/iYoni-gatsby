@@ -22,11 +22,18 @@ function Navbar() {
       }
   };
 
+
   useEffect(() => {
+     window.addEventListener('resize', showButton) ;
       showButton();
+    //   return () => {
+    //         window.removeEventListener 
+    //   }
   }, []);
 
-  window.addEventListener('resize', showButton) ;
+  
+
+
 
   return (
       <nav className="navbar">
