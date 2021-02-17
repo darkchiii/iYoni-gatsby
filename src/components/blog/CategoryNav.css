@@ -1,0 +1,25 @@
+.cat-navbar {
+    padding-top: 100px;
+    padding-left: 100px;
+    /* padding-right: 100px; */
+    /* color: navy !important; */
+}
+
+.button {
+    /* background-color: #F56B9B; */
+    /* opacity: 0.2 ; */
+    border-radius: 10px !important;
+    font-family: 'Averta' !important;
+    font-weight: 600 !important;
+    color: #F45D92 !important;
+    background-color: #FEEAFA;
+
+}
+
+.uk-button {
+    /* color: unset ; */
+    font: 'Averta' !important;
+    color: navy;
+    border-radius: 20 !important;
+
+}

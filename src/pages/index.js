@@ -1,24 +1,43 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Layout from "../components/layout";
+import FunctionsSection from '../components/home/FunctionsSection' ;
+import AppStoreSection from '../components/home/AppStoreSection' ;
+import HeroSection from '../components/home/HeroSection' ;
+import BenefitsSection from '../components/home/BenefitsSection' ;
+import MomSection from '../components/home/MomSection' ;
+import ValuesSection from '../components/home/ValuesSection' ;
 
-import HeroSection from '../components/home/HeroSection'
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Header from '../components/header.js'
+import "../assets/main.css";
 
-const IndexPage = () => (
-  <Layout>
-    <HeroSection/>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+const IndexPage = () => {
+  // const data = useStaticQuery(query);
+
+  return (
+
+
+    <div>
+      <Header/>
+      <HeroSection/>
+      <MomSection/>
+      <BenefitsSection/>
+      <FunctionsSection/>
+      <ValuesSection/>
+      <AppStoreSection/>
+
+
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+  );
+};
 
-export default IndexPage
+// const query = graphql`
+//   query {
+//       seo {
+//         metaTitle
+//         metaDescription
+//       }
+//     }
+// `;
+
+export default IndexPage;
