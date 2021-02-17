@@ -11,7 +11,7 @@ function HeroSection() {
     return (
         <section className='hero-section'>
         <div className='hero-container' 
-        style={{backgroundImage: 'url{heroBanner}'}}
+        style={{backgroundImage: `url(${heroBanner})`}}
         > 
             <div className='hero-row-container'>
             <div className='hero-row'>

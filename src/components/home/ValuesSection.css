@@ -73,7 +73,7 @@ width: 100%;
 .values-icon {
     width: 48px;
     height: 48px;
-    padding-top: 5px;
+    padding-top: 35px;
 }
 
 .values-col-2 >h3 {
@@ -82,6 +82,7 @@ font-size: 28px;
 line-height: 33.6px; 
 letter-spacing: -1.1px;
 color:#3A4BA3 ;
+
 }
 
 /*

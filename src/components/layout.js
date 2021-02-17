@@ -1,35 +1,35 @@
 
 
 import React from "react";
-import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import CategoryNav from "./blog/CategoryNav";
+import PropTypes from "prop-types";
 import Seo from "./seo";
-import HeroSection from "./home/HeroSection";
 import Footer from "./footer";
-import Navbar from "./header";
+import Header from "./header";
 
-const Layout = ({ 
-  // children, seo 
-}) => (
+const Layout = ({ children, seo }) => (
   <StaticQuery
-    // query={graphql`
-    //   query {
-    //     strapiHomepage {
-    //       seo {
-    //         metaTitle
-    //         metaDescription
-    //       }
-    //     }
-    //   }
-    // `}
+    query={graphql`
+      query {
+        strapiHomepage {
+          seo {
+            metaTitle
+            metaDescription
+            shareImage {
+              publicURL
+            }
+          }
+        }
+      }
+    `}
     render={(data) => (
       <>
-        {/* <Seo seo={seo} /> */}
-        {/* <Navbar/> */}
-        {/* <CategoryNav /> */}
-        {/* <Footer/> */}
-        {/* <main>{children}</main> */}
+        <Seo seo={seo} />
+        <Header/>
+        <main>{children}</main>
+                <Footer/>
+
       </>
     )}
   />

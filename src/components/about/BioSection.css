@@ -2,8 +2,12 @@
 
 .bio-container {
 display: flex;
-padding-bottom: 70px;
+/* margin-bottom: 120px; */
 flex-wrap: wrap;
+}
+
+.bio-section {
+  padding-bottom: 50px;
 }
 
 .vector-b-3 {
@@ -18,7 +22,7 @@ flex-wrap: wrap;
 
 }
 .text-container {
-max-width: 530px;
+max-width: 450px;
 padding-left: 90px;
 margin: 0 auto ;
 
@@ -40,6 +44,8 @@ width: 100%;
 max-height: 368px;
 margin: 0 auto;
 padding-left: 10px;
+vertical-align: middle;
+padding-top: 50px;
 }
 
 .bio-image-2 {
@@ -47,15 +53,19 @@ padding-left: 10px;
 max-width: 457px; 
 max-height:    348px;
 margin: 0 auto;
+padding-top: 50px;
+
 /* padding-right: 140px; */
 
 }
 
 .bio-image-3 {
-  width: 100%;
+  width: 94%;
 max-width: 559.32px; 
 max-height:     323.48px;
 margin: 0 auto;
+padding-top: 40px;
+
 /* padding-right: 60px; */
 }
 
@@ -96,7 +106,8 @@ margin: 0 auto;
     line-height: 34px;
     letter-spacing: -1.1px;
     color: #19126C;
-    padding-bottom: 20px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
     }
     
     .column .p-a {
@@ -105,7 +116,7 @@ margin: 0 auto;
     line-height: 21px;
     letter-spacing: -0.6px;
     color: #19126C;
-    padding-bottom: 18px;
+    padding-bottom: 10px;
 
 
     }

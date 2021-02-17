@@ -72,7 +72,8 @@
         
         .rec-img {
         width: 538px ;
-        height: 414px;
+        /* height: 419px; */
+        height: 100%;
         position: absolute;
         right: 0;
         top:0px

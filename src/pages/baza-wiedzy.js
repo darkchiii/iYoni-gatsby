@@ -16,15 +16,15 @@ const BazaWiedzy = () => {
   
   return (
     <>
-    <Header/>
+    {/* <Header/> */}
     <CategoryNav/>
-{/* <Layout> */}
+<Layout>
 <div className="uk-section">
         <div className="uk-container uk-container-large">
           <ArticlesComponent articles={data.allStrapiArticle.edges} />
         </div>
       </div>
-{/* </Layout> */}
+</Layout>
 <Footer/>
     </>
   );

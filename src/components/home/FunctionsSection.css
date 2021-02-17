@@ -4,6 +4,36 @@
 padding-bottom: 106px;
 }
 
+
+
+
+.flexcontainer {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+
+    /* You can set flex-wrap and
+       flex-direction individually */
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100% ;
+    max-width: 1200px;
+    margin: 0 auto ;
+    align-content: space-between;
+
+    /* Or do it all in one line
+      with flex flow */
+    /* flex-flow: row wrap; */
+    /* tweak where items line
+       up on the row
+       valid values are: flex-start,
+       flex-end, space-between,
+       space-around, stretch */
+    /* align-content: flex-end; */
+ }
+  
+
+ /* zle */
 .functions-section > h1 {
 font-weight: 600;
 font-size: 48px;
@@ -78,7 +108,7 @@ height: 48px;
     margin: 0 auto ;
     padding-bottom: 30px;
 }
-/* 
+
 .flex-container {
     display: flex ;
     flex-wrap: wrap;
@@ -86,13 +116,14 @@ align-content: space-between;
 justify-content: center;
 margin : 0 auto ;
     flex-wrap: wrap;
-} */
+}
 
 .flex-col-container-a {
 max-width: 200px;
 display: flex ;
 flex-wrap: wrap;
 align-content: space-between;
+flex-direction: row;
 justify-content: center;
 margin : 0 auto ;
 flex-wrap: wrap;
@@ -105,6 +136,8 @@ flex-wrap: wrap;
     display: flex ;
     flex-wrap: wrap;
 align-content: space-between;
+flex-direction: row;
+
 justify-content: center;
 margin : 0 auto ;
     flex-wrap: wrap;

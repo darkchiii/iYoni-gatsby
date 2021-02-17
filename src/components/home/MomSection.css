@@ -100,7 +100,7 @@ color: #31429B;
 
 .text-wrapper2 {
 margin:auto 0 ;
-padding-top: 147px;
+padding-top: 107px;
 }
 
 
@@ -111,7 +111,7 @@ padding-top: 147px;
     text-align: center;
     letter-spacing: -1.1px;
     color:#F45D92 ;
-    padding-bottom: 45px;
+    padding-bottom: 15px;
 
 } 
 
@@ -123,7 +123,7 @@ line-height: 34px;
 text-align: center;
 letter-spacing: -1.1px;
 color: #19126C;
-padding-bottom: 20px;
+padding-bottom: 0px;
 } 
 
 .mom-rectangle {
@@ -144,7 +144,7 @@ padding-bottom: 20px;
     position: relative;
     text-align: center;
     color: #F45D92;
-    top: 42px;
+    top: 70px;
     font-size: 28px;
     line-height: 34.16px;
     letter-spacing: -1.1px;

@@ -7,9 +7,11 @@ import HeroSection from '../components/home/HeroSection' ;
 import BenefitsSection from '../components/home/BenefitsSection' ;
 import MomSection from '../components/home/MomSection' ;
 import ValuesSection from '../components/home/ValuesSection' ;
+import BaseSection from '../components/home/BaseSection' ;
 
 import Header from '../components/header.js'
 import "../assets/main.css";
+import Footer from "../components/footer";
 
 const IndexPage = () => {
   // const data = useStaticQuery(query);
@@ -23,10 +25,10 @@ const IndexPage = () => {
       <MomSection/>
       <BenefitsSection/>
       <FunctionsSection/>
+      <BaseSection/>
       <ValuesSection/>
       <AppStoreSection/>
-
-
+      <Footer/>
     </div>
   );
 };
