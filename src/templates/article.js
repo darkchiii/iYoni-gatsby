@@ -38,7 +38,8 @@ export const query = graphql`
   }
 `;
 
-const Article = ({ data }) => {
+const Article = ({ data, ...extra }) => {
+  console.log(extra, "extra")
   const article = data.strapiArticle;
   const seo = {
     metaTitle: article.title,
@@ -46,6 +47,13 @@ const Article = ({ data }) => {
     shareImage: article.image,
     article: true,
   };
+
+    React.useEffect(() => {
+      // console.log(extra,"extra")
+      // fetch('http://localhost:1337/articles?slug=' +)
+      console.log("xxx")
+      
+    }, [])
 
   return (
     <Layout seo={seo}>
